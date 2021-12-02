@@ -6,6 +6,7 @@
 using namespace std;
 
 // Assigning variables and to their data types
+
 string name, firstName, lastName;
 float farenhietConvert, tempEntered, calculatetemp, num1, num2;
 int number;
@@ -16,12 +17,14 @@ double raisePow(double, double);
 //Function exchange Pesos to US Dollar
 float pesosToUS() 
 {
-	exchangeCalculation = exchangeRate / 20.66f;	//Pesos to US conversion equation
+	exchangeCalculation = exchangeRate / 20.66f;		//Pesos to US conversion equation
 	cout << exchangeRate << " is equivalent to " << exchangeCalculation << " dollars.\n";
 	return exchangeCalculation;
 }
 
+
 //Function exchange temperature from Farenheit to Celsius
+
 float exchangeTemp() 
 {
 	calculatetemp = (tempEntered - (32)) * 0.5555f;		//Farenheit to Celsius conversion equation
@@ -29,7 +32,9 @@ float exchangeTemp()
 	return calculatetemp;
 }
 
+
 //Function count length of a given name from the user
+
 char lengthofName()
 {
 	name = firstName + lastName;
@@ -37,7 +42,9 @@ char lengthofName()
 	return(name.length());
 }
 
+
 //Function to raise power
+
 double raisePow(double, double) 
 {
 	//pow(x, y) keyword pow is to raise number x to the power number y 
@@ -45,7 +52,9 @@ double raisePow(double, double)
 	return pow(num1, num2);
 }
 
+
 //Function to calculate if number is even or odd
+
 int evenOrOdd(int number) 
 {
 	if (number % 2 == 0)	// If remainder of number entered by user is 0, then its an even number
@@ -73,7 +82,7 @@ int main()
 		cout << "4: Raise X to the power Y.   5: Or find if a number is odd or even. \n";
 		cin >> programNum;
 		
-		if (programNum == 1)	//If user enters 1, exchange pesos to dollars with input validation
+		if (programNum == 1)		//If user enters 1, exchange pesos to dollars with input validation
 		{
 			cout << "Please enter a number to exchange the amount to US Dollars: \n";
 			cin >> exchangeRate;
@@ -88,10 +97,10 @@ int main()
 				cin >> exchangeRate;
 			}
 
-			pesosToUS();	//call function
+			pesosToUS();		//call function
 		}
 			
-		else if (programNum == 2)	//If user enters 2, exchange farenheit to celsius with input validation
+		else if (programNum == 2)		//If user enters 2, exchange farenheit to celsius with input validation
 		{
 			cout << "Enter Farenhiet temperature to exchange to Celsius: \n";
 			cin >> tempEntered;
@@ -131,7 +140,7 @@ int main()
 			lengthofName();		//call function
 		}
 
-		else if (programNum == 4)	//If user enters 4, raise num1 to the power num2 with input validation
+		else if (programNum == 4)		//If user enters 4, raise num1 to the power num2 with input validation
 		{
 			cout << "Please enter first number to power it by the second number: \n";
 			cout << "Example enter first number X and raise it to the power Y: \n";
@@ -151,7 +160,7 @@ int main()
 			raisePow(num1, num2);
 		}
 
-		else if (programNum == 5)	//If user enters 5, check if a number is odd or even with input validation
+		else if (programNum == 5)		//If user enters 5, check if a number is odd or even with input validation
 		{
 			
 			cout << "Enter a number to check if even or odd.\n";
@@ -170,7 +179,7 @@ int main()
 
 			evenOrOdd(number);
 		}
-		else if (programNum > 5 || programNum < 1 || !cin)	//If user enters a number outside the range of menu number, let them repeat the program
+		else if (programNum > 5 || programNum < 1 || !cin)		//If user enters a number outside the range of menu number, let them repeat the program
 		{
 			cout << "You did not enter a number from 1 to 5:\n";
 			cout << "Try again\n";
@@ -179,7 +188,7 @@ int main()
 		cin >> repeat;
 	}
 
-	while (repeat == "Y" || repeat == "y");		//when user inputs y or Y, repeat program
+	while (repeat == "Y" || repeat == "y");			//when user inputs y or Y, repeat program
 
 }
 
